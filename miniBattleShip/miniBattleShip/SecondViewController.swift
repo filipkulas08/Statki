@@ -8,7 +8,7 @@
 
 import UIKit
 
-var color = "Black"
+var color = "White"
 var name = "Random"
 class SecondViewController: UIViewController {
     var button = dropDownBtn()
@@ -37,7 +37,7 @@ class SecondViewController: UIViewController {
         button.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         
-        button.dropView.dropDownOptions = ["Blue","Green"]
+        button.dropView.dropDownOptions = ["Black","Green","Yellow","Red","White"]
     }
     
     override func didReceiveMemoryWarning() {

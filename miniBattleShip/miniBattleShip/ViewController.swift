@@ -15,7 +15,11 @@ var countShipShooted = 0
 var mycountShipShooted = String(countShipShooted)
 var percentageShipShooted:Float = 0
 var mypercentageShipShooted = String(percentageShipShooted)
+
 class ViewController: UIViewController {
+    
+    
+
     @IBOutlet weak var buttonPutShips: UIButton!
     
     @IBOutlet weak var textPutShips: UITextView!
@@ -237,7 +241,29 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         boardEnemy.isHidden = true
+        if color == "Black"{
+            boardEnemy.image = UIImage(named: "imagesBlack")
+            boardOwn.image = UIImage(named: "imagesBlack")
+        }
+        else if color == "Green"{
+            boardEnemy.image = UIImage(named: "imagesGreen")
+            boardOwn.image = UIImage(named: "imagesGreen")
+        }
+        else if color == "Yellow"{
+            boardEnemy.image = UIImage(named: "imagesYellow")
+            boardOwn.image = UIImage(named: "imagesYellow")
+        }
+        else if color == "Red"{
+            boardEnemy.image = UIImage(named: "imagesRed")
+            boardOwn.image = UIImage(named: "imagesRed")
+        }
+        else{
+            boardEnemy.image = UIImage(named: "images")
+            boardOwn.image = UIImage(named: "images")
+        }
         if status == 0{
             for n in 10...19{
                 let tempButton = self.view.viewWithTag(Int(n)) as? UIButton
